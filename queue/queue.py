@@ -51,19 +51,19 @@ class LinkedList:
 
 class Queue:
     def __init__(self):
-        self.size = 0
+        self.len = 0
         self.data = LinkedList()
     
     def __len__(self):
-        return self.size
+        return self.len
 
     def enqueue(self, value):
         self.data.add_to_tail(value)
-        self.size += 1
+        self.len = self.len + 1
 
     def dequeue(self):
-        if self.size == 0:
+        if self.len == 0:
             return None
         else: 
-            self.size -= 1
+            self.len = self.len - 1
             return self.data.remove_head()

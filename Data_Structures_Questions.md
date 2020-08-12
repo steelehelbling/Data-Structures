@@ -1,33 +1,37 @@
 Answer the following questions for each of the data structures you implemented as part of this project.
 
 ## Stack
+0(1)#does notrun more than once
+0(n)runs over list 
+0(log(n))every time it cuts the data in half
+0(n^2)for every item it cycles the whole list
 
 1. What is the runtime complexity of `push` using a list?
 O(1)
 2. What is the runtime complexity of `push` using a linked list?
-O(n)
+O(1)
 3. What is the runtime complexity of `pop` using a list?
 O(1)
 4. What is the runtime complexity of `pop` using a linked list?
-O(n)
+O(1)
 5. What is the runtime complexity of `len` using a list?
 O(1)
 6. What is the runtime complexity of `len` using a linked list?
-O(n)
+O(1)
 ## Queue
 
 1. What is the runtime complexity of `enqueue` using a list?
-O(1)
+O(1) or O(n)
 2. What is the runtime complexity of `enqueue` using a linked list?
-O(n)
-3. What is the runtime complexity of `dequeue` using a list?
 O(1)
+3. What is the runtime complexity of `dequeue` using a list?
+O(n) or O(1)
 4. What is the runtime complexity of `dequeue` using a linked list?
-O(n)
+O(1)
 5. What is the runtime complexity of `len` using a list?
 O(1)
 6. What is the runtime complexity of `len` using a linked list?
-O(n)
+O(1)
 ## Doubly Linked List
 
 1. What is the runtime complexity of `ListNode.insert_after`?
