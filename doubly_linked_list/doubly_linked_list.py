@@ -17,7 +17,6 @@ class ListNode:
         return self.prev
     def set_prev(self, new_prev):#updates the prev node
         self.prev = new_prev
-
     def delete(self):
         if self.prev:
                 self.prev.next = self.next
@@ -113,8 +112,8 @@ class DoublyLinkedList:
             return
         else:
             value = node.value
-            self.delete(node)
-            self.add_to_head(value)
+            self.delete(node)#removes the givein item
+            self.add_to_head(value)#moves givein item to back
         
     """
     Removes the input node from its current spot in the 
@@ -124,28 +123,28 @@ class DoublyLinkedList:
         if node == self.tail:
             return
         value = node.value
-        self.delete(node)
-        self.add_to_tail(value)
+        self.delete(node)#removes the givein item
+        self.add_to_tail(value)#moves givein item to back
 
     """
     Deletes the input node from the List, preserving the 
     order of the other elements of the List.
     """
     def delete(self, node):
-        if self.head is None and self.tail is None:
+        if self.head is None and self.tail is None:#empty
             return
-        if node is self.head and node is self.tail:
+        if node is self.head and node is self.tail:#chech if there one item
             self.head = None
             self.tail = None
         elif node is self.head:
-            self.head = node.next
+            self.head = node.next#moves head
             node.delete()
         elif node is self.tail:
-            self.tail = node.prev
+            self.tail = node.prev#moves tail
             node.delete()
         else:
-            node.delete() 
-        self.length = self.length - 1
+            node.delete() #in middle
+        self.length = self.length - 1#keeps track of length
 
     """
     Finds and returns the maximum value of all the nodes 
@@ -155,7 +154,7 @@ class DoublyLinkedList:
         value = self.head.value
         gethead = self.head
         while gethead != None:
-            if gethead.value > value:
-                value = gethead.value
+            if gethead.value > value:#compairs item given to the max in the list
+                value = gethead.value#if lager change number if smaller it dosn't run
             gethead = gethead.next
         return value
